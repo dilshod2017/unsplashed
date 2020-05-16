@@ -118,6 +118,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "unsplashed"
+    }
+  },
+  "defaultProject": "unsplashed",
+  "cli": {
+    "analytics": false
+  }
 }
