@@ -12,5 +12,6 @@ export class LandingPage implements OnInit {
     ngOnInit(){
         console.log("init");
         
+        
     }
 }

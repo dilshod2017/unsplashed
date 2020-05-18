@@ -7,10 +7,12 @@ import { MainControlService } from './service/control/main.control.service';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPage } from './pages/landing/landing.component';
 import { routes } from './routes/routes';
+import { NavBarComponent } from './nav/nav';
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPage
+    LandingPage,
+    NavBarComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
