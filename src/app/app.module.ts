@@ -2,26 +2,44 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CacheService } from './service/modules/cache.service';
-import { MainControlService } from './service/control/main.control.service';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPage } from './pages/landing/landing.component';
 import { routes } from './routes/routes';
 import { NavBarComponent } from './nav/nav';
-@NgModule({
+import { TabsMainComponent } from './components/tabs/tabs.component';
+import { ProfileComponent } from './pages/profile/profile.page';
+import { LoginPage } from './pages/login/login.page';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { OAuth } from './authentication/OAuth/OAuth';
+import { Cache } from './service/cache/cache';
+import { TokenInterceptor } from './authentication/Interseptor/http.interceptor';
+
+
+ @NgModule({
   declarations: [
     AppComponent,
     LandingPage,
-    NavBarComponent
+    NavBarComponent,
+    TabsMainComponent,
+    ProfileComponent,
+    LoginPage
   ],
   imports: [
     RouterModule.forRoot(routes),
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
-    CacheService,
-    MainControlService
-  ],
+    OAuth,
+    Cache,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi:true
+    }
+   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component,OnInit } from "@angular/core";
 
+
 @Component({
     selector:"landing",
     templateUrl:"./landing.component.html",
@@ -7,11 +8,10 @@ import { Component,OnInit } from "@angular/core";
 })
 export class LandingPage implements OnInit {
     constructor(){
-
+        
     }
     ngOnInit(){
-        console.log("init");
-        
+         
         
     }
 }

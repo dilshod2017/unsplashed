@@ -1,0 +1,16 @@
+<section class="container-fluid mx-auto" style="min-height: auto;border: 1px solid red;">
+    <div class="container-fluid d-flex flex-wrap card-header" style="background: lightgray;">
+        <div class="p-2 container-fluid">
+            <div class="d-flex card-body tab-pane">
+                <ng-content select=".tab-1">
+                </ng-content>
+            </div>
+        </div>
+       <div class="p-2 container-fluid">
+            <div class="d-flex card-body tab-pane">
+                <ng-content select=".tab-2">
+                </ng-content>
+            </div>
+       </div>
+    </div>
+</section>

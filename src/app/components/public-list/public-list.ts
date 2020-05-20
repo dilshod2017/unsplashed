@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { CacheService } from 'src/app/service/modules/cache.service';
-
+ 
 
 @Component({
     selector:"public-list",
@@ -9,7 +8,7 @@ import { CacheService } from 'src/app/service/modules/cache.service';
 })
 
 export class PublicList implements OnInit {
-    constructor(private cache:CacheService){
+    constructor(){
         
     }
     ngOnInit(){

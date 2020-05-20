@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-
+import { OAuth } from '../authentication/OAuth/OAuth';
+ 
 
 @Component({
     selector:"nav-bar",
@@ -7,10 +8,13 @@ import { Component, OnInit } from "@angular/core";
     styleUrls:["./nav.css"]
 })
  export class NavBarComponent implements OnInit {
-     constructor(){
+    constructor(private OAuth:OAuth){
 
      }
      ngOnInit(){
          
      }
+    login() {
+        // this.mainService.navigateTo("/login")
+    }
  }
