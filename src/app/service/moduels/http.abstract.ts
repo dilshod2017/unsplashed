@@ -5,7 +5,6 @@ export abstract class http {
     constructor(http:HttpClient){
         console.log("http created");
         this.http = http;
-        
     }
     GET(url, options=null){
         return (options === null)? this.http.get(url):this.http.get(url,options);
