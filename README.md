@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/DilshodKhodjayev64/test-micorsoft-learn/_apis/build/status/Space%20Game%20-%20web?branchName=master)](https://dev.azure.com/DilshodKhodjayev64/test-micorsoft-learn/_build/latest?definitionId=4&branchName=master)
+
 # Unsplashed
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
